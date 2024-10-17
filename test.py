@@ -55,7 +55,7 @@ def save_to_pdf(text, filename):
     my_text = website_text
 
     # Encode the text to UTF-8 and then decode it to Latin-1, replacing unencodable characters
-    # with a replacement character (e.g.,  )
+    # with a replacement character (e.g., �)
     encoded_text = my_text.encode('utf-8', 'replace').decode('latin-1')
 
     # Add a page
@@ -217,7 +217,7 @@ def add_to_chroma(chunks: list[Document]):
 def calculate_chunk_ids(chunks):
 
     # This will create IDs like "data/monopoly.pdf:6:2"
-    # Page Source : Page Number :  Chunk Index
+    # Page Source : Page Number : Chunk Index
 
     last_page_id = None
     current_chunk_index = 0
@@ -248,5 +248,5 @@ def clear_database():
         shutil.rmtree(CHROMA_PATH)
 
 
-if _name_ == "_main_":
-main2()
+if __name__ == "__main__":
+    main2()
