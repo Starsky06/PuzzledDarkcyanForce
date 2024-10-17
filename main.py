@@ -79,5 +79,7 @@ if st.button("Generate"):
 
     st.caption(design)
     st.divider()
+    st.write(story)
+    st.divider()
     st.image(art)
-    st.caption(story)
+    
